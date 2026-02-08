@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
+
 import os
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from . import views
 
 
@@ -29,10 +32,12 @@ router.register(r'activities', views.ActivityViewSet)
 router.register(r'leaderboard', views.LeaderboardViewSet)
 router.register(r'workouts', views.WorkoutViewSet)
 
+
+@api_view(['GET'])
 def api_root(request, format=None):
     codespace_name = os.environ.get('CODESPACE_NAME', 'localhost')
     base_url = f"https://{codespace_name}-8000.app.github.dev" if codespace_name != 'localhost' else "http://localhost:8000"
-    return views.Response({
+    return Response({
         'users': f'{base_url}/api/users/',
         'teams': f'{base_url}/api/teams/',
         'activities': f'{base_url}/api/activities/',

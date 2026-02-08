@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 60px;
+  pointer-events: none;
+  margin-right: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #4f46e5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.App-link {
+  color: #6366f1;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+ .App-link:hover {
+  color: #a21caf;
+}
+.navbar {
+  background: linear-gradient(90deg, #6366f1 0%, #a21caf 100%);
+  color: #fff;
+}
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: #fbbf24 !important;
+}
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+}
+
+/* Table styling */
+table {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(100, 100, 200, 0.1);
+  margin: 20px auto;
+  width: 90%;
+}
+th {
+  background: #6366f1;
+  color: #fff;
+  font-weight: bold;
+}
+td {
+  color: #374151;
+}
+
+/* Button styling */
+.btn-primary {
+  background: #a21caf;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: #6366f1;
+}
+
+/* Heading styling */
+h1, h2, h3, h4, h5 {
+  color: #a21caf;
+  font-weight: bold;
+}
+/* Left-justified logo */
+.octofit-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
